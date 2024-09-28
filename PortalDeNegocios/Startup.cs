@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using PortalDeNegocios.Data;
 
 namespace PortalDeNegocios {
     public class Startup {
@@ -28,6 +30,9 @@ namespace PortalDeNegocios {
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+    services.AddDbContext<PortalDeNegociosContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("PortalDeNegociosContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
