@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using PortalDeNegocios.Models.ViewModels;
 
 namespace PortalDeNegocios.Controllers {
     public class HomeController : Controller {
