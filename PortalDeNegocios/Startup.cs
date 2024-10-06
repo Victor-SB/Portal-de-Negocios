@@ -31,7 +31,7 @@ namespace PortalDeNegocios {
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddDbContext<PortalDeNegociosContext>(options =>
+            services.AddDbContext<PortalDeNegociosContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("PortalDeNegociosContext"), builder =>
             builder.MigrationsAssembly("PortalDeNegocios")));
         }
